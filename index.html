@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155724944-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-155724944-1');
+	</script>
+    <meta charset="utf-8">
+    <title>How Much it Cost Me to Commute Without Owning a Car in 2019 --- (outer outer space)</title>
+	<meta name="description" content="A set of data visualizations showing the amount of money I spent on commuting in 2019 without owning a car.">
+	<meta name="author" content="Outer Outer Space">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap" rel="stylesheet">
+	</head>
+	<style>
+	    @font-face {
+		  font-family: 'Chomsky', serif;
+		  src: url('../fonts/Chomsky.otf'); /* IE9 Compat Modes */
+		  src: url('../fonts/Chomsky.otf')  format('opentype'), /* Safari, Android, iOS */
+		}
+		html, body {
+			margin: 0;
+			padding: 20px;
+			width: 100%;
+			height: 100%;
+			background: #1a1c1e;
+			font-family: 'Work Sans', sans-serif;
+			color: #ffffff;
+			letter-spacing: .02em;
+		}
+		
+		.wrapper {
+			max-width: 780px;
+			margin: 0 auto 100px auto;
+			height: auto;
+		}
+		
+		.title-section {
+			width: 85%;
+			/*display: flex;
+			justify-content: space-between;*/
+			margin-top: 50px;
+		}
+		
+		.title-section-h1 {
+			font-size: 33px;
+			line-height: 1.2;
+			max-width: 700px;
+		}
+		
+		.title-section-p {
+			font-style: italic;
+			font-size: 11px;
+			line-height: 14px;
+			letter-spacing: 0.05em; 
+			text-align: left;
+			margin-top: 25px;
+			margin-bottom: 50px;
+		}
+		
+		.navigation {
+			width: 100%;
+			margin: 20px auto 0 auto;
+		}
+		
+		.navigation-list {
+			padding: 0;
+		}
+		
+		.navigation-list-item {
+			list-style-type: none;
+			display: inline-block;
+			margin-right: 6px;
+		}
+		
+		.navigation-list-item:last-child {
+			margin-right: 0;
+		}
+		
+		.navigation-list-link {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 6px 10px;
+			border: 1px solid #ffffff;
+			font-size: 11px;
+		}
+		
+		.navigation-list-link:hover {
+			color: #1a1c1e;
+			background: #ffffff;
+		}
+		
+		.total-spend {
+			border: 1px solid white;
+			margin-bottom: 40px;
+			padding: 26px 26px 0 26px;
+			display: flex;
+			align-items: baseline; 
+			width: auto;
+		}
+		
+		.total-spend-left {
+			margin-right: 20px;
+		}
+		
+		.total-spend-headline {
+			font-size: 15px;
+			line-height: 0;
+		}
+		
+		.total-spend-number {
+			font-weight: 300;
+			font-size: 65px;
+			line-height: 0px;
+			letter-spacing: -0.03em;
+			margin-top: 55px;
+			color: #E24974;
+		}
+		
+		.total-spend-description {
+			font-size: 13px;
+			line-height: 1.5;
+		}
+		
+		.chart--container-1 {
+			min-height: 150px;
+			width: 100%;
+			height: 509px;
+			border: 1px solid white;
+			background: #1a1c1e;
+			margin-bottom: 40px;		}
+			
+		.chart--container-2 {
+			min-height: 150px;
+			width: 100%;
+			height: 445px;
+			border: 1px solid white;
+			background: #1a1c1e;
+			margin-bottom: 40px;
+		}
+		.chart--container-3 {
+			min-height: 150px;
+			width: 100%;
+			height: 470px;
+			border: 1px solid white;
+			background: #1a1c1e;
+			margin-bottom: 40px;
+		}
+		footer {
+			text-align: center;
+			padding-bottom: 100px;
+			display: block;
+			margin-top: 80px;
+		}
+		.footer-title {
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 20px;
+			text-align: center;
+		}
+
+		.footer-title:hover {
+			color: #11f5a9;
+		}
+		
+		.footer-title em {
+			font-family: 'Chomsky', serif;
+			margin-top: 40px;
+			margin-bottom: -40px;
+		}
+	</style>
+	<body>
+	    <div class="wrapper">
+			<div class="title-section">
+			<h1 class="title-section-h1">How Much it Cost Me to Commute Without Owning a Car in 2019</h1>
+			</div>
+
+			<div class="navigation">
+				<ul class="navigation-list">
+					<li class="navigation-list-item"><a class="navigation-list-link" href="blog">About this Project</a></li>
+					<li class="navigation-list-item"><a class="navigation-list-link" href="img/cost-of-commuting-without-a-car-in-2019.png">Download Infographic</a></li>
+					<li class="navigation-list-item"><a class="navigation-list-link" href="https://app.zingsoft.com/demos/create/RLX2JXDW" target="_blank">Play with Project Code</a></li>
+				</ul>
+				<p class="title-section-p">Source: My 2019 bank statements</p>
+			</div>
+
+			<div class="total-spend">
+			<div class="total-spend-left">
+				<h1 class="total-spend-headline">My Total Commuting Costs in 2019</h1>
+				<p class="total-spend-number">&#36;5,204.33</p>
+			</div>
+			<p class="total-spend-description">This data includes my 2019 e-scooter rides, e-bike rides, ride shares, public transit rides and the costs of purchasing and maintaining a used Xiaomi M365 scooter. It doesn’t include any plane or train rides I purchased in 2019.</p>
+			</div>
+			<div id="myChart1" class="chart--container-1"></div>  
+			<div id="myChart3" class="chart--container-3"></div>   
+			<div id="myChart2" class="chart--container-2"></div>
+			<div id="myChart4" class="chart--container-1"></div>
+			<br>
+			
+			<footer>
+				<p>Made by <a class="footer-title" href="../../"><strong>Outer</strong> <em>Outer</em> <strong>Space</strong></a></p>
+			</footer>
+	    </div>
+
+		<script>
+			// window.onload event for Javascript to run after HTML
+			// because this Javascript is injected into the document head
+			window.addEventListener('load', () => {
+				// Javascript code to execute after DOM content
+			
+			ZC.LICENSE = ['41d721c2d48db3d52881157eb8916967'];
+			
+				// full ZingChart schema can be found here:
+				// https://www.zingchart.com/docs/api/json-configuration/
+				let chartConfig = {
+				  type: 'hbar',
+			
+				  globals: {
+				  	fontSize: '11px',
+				  	fontColor: '#ffffff',
+				  	fontFamily: 'Work Sans',
+				  },
+				  backgroundColor: '#1a1c1e',
+				  title: {
+				  	text: 'My Monthly Commuting Costs in 2019',
+				  	width: 323,
+				  	fontSize: '17px',
+				  	textAlign: 'left',
+				  	offsetX: 26,
+				  	offsetY: 35
+				  },
+				  // plot represents general series, or plots, styling
+				  plot: {
+				  	valueBox: {
+				  		text: '$%v',
+				  		placement: 'top-out',
+				  		fontColor: '#ffffff',
+				  		shadow: false,
+				  		fontWeight: 'normal',
+				  		fontSize: '10px'
+				  	},
+				  	// animation docs here:
+				  	// https://www.zingchart.com/docs/tutorials/design-and-styling/chart-animation/#animation__effect
+				  		 animation: {
+							delay: 50,
+							effect: 'ANIMATION_EXPAND_TOP',
+							method: 'ANIMATION_LINEAR',
+							sequence: 'ANIMATION_BY_PLOT_AND_NODE',
+							speed: '150'
+						},
+				  	borderColor: '#1a1c1e',
+						borderWidth: 1,
+				  	barWidth: '6px',
+				  	styles: [ '#C63D8B', '#A040A2', '#7A43B9', '#6744C5', '#EC3A74', '#2E49E8', '#4147DC', '#B33E97', '#5446D1', '#8D41AE', '#D93B7F', '#FF3868' ]
+				  },
+				  scaleX: {
+				  	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+				  	label: {
+				  		text: 'Months in 2019',
+				  		fontSize: '9px'
+				  	},
+				  	maxItems: 12,
+				  	item:{  
+				  		fontSize: '9px' 
+				  	},
+				  	tick: {
+				  		visible: false
+				  	},
+				  	step: 12
+				  },
+				  scaleY: {
+				  	minValue: 0,
+						step: 50,
+						maxItems: 12,
+				  	item:{  
+				  		fontSize: '9px' 
+				  	},
+				  	label: {
+				  		text: 'Cost (USD)',
+				  		fontSize: '9px'
+				  	},
+				  	guide: {
+				  		lineColor: '#2F2F2F',
+				  	}  
+				  },
+				  plotarea: {
+				  	marginTop: '100px',
+				  	marginLeft: '100px'     
+				  },
+				  source:{
+						text: 'Made with ZingChart',
+						fontWeight: '400',
+						fontColor: '#8a8a8a',
+						fontSize: '9px',
+						marginBottom: '5px',
+						marginRight: '5px'
+				},
+				  crosshairX: {
+				  	plotLabel: {
+				  		text: `
+                            <div class='custom-tooltip' style='background-color:%color; width: 100%; margin-top: -35px; margin-left: -4px; padding-left: 6px; padding-right: 1px; padding-bottom: 10px; height: 20px; border: 1px solid white; line-height: 1.5;'>
+                              <p style='margin-top: -7px; padding-left: 2px; padding-right: 2px;'>In %kl I spent <strong>%plot-percent%</strong> of my total yearly spend</p>
+                            </div>`,
+				  		backgroundColor: '#1a1c1e',
+				  		fontColor: '#ffffff',
+				  		padding: '5px',
+				  		decimals: 2,
+				  		htmlMode: true,
+				  		height: 30,
+				  		borderWidth: 0,
+				  		short: true
+				  	},
+				  	lineWidth: '100%',
+				  	lineColor: '#000000',
+				  	alpha: 0.2,
+				  	decimals: 2,
+				  	scaleLabel: {
+				  		visible: false
+				  	}
+				  },
+				  tooltip: {
+				  	visible: false
+				  },
+				  shapes: [
+				  	{
+				  		type: 'rect',
+				  		backgroundColor: '#1a1c1e',
+				  		borderColor: '#ffffff',
+				  		borderWidth: '1px',
+				  		height: 56,
+				  		width: 238,
+				  		x: 570,
+				  		y: 48,
+				  		label: {
+				  			  text: 'Less Money Spent ← | → More Money Spent',
+				  			  offsetY: '13px',
+				  			  fontSize: '9px',
+				  			  textAlign: 'left'
+				  		}
+				  	},
+					{
+				  		type: 'rect',
+				  		backgroundColor: '#FF3868,#2E49E8',
+				  		height: 219,
+				  		width: 18,
+				  		x: 571,
+				  		y: 39,
+				  		angle: 90
+				  	}
+				],
+				  series: [
+				  	{
+				  		values: [478.00, 463.01, 428.03, 412.22, 501.02, 232.21, 301.42, 471.11, 398.46, 457.51, 482.53, 578.81]
+				  	}
+				  ]
+				};
+			
+			// render chart
+			zingchart.render({
+				  id: 'myChart1',
+				  output: 'svg',
+				  data: chartConfig,
+				  height: '100%',
+				  width: '100%'
+				});
+			});
+			
+			
+			let queries = [
+				'Xiaomi', 'Metro', 'Lime', 'Uber', 'Lyft', 'Bird'
+			];
+			
+			let chartData = [
+				[[1546329600000, 0], [1549008000000, 0], [1551427200000, 0], [1554102000000, 0], [1556694000000, 0], [1559372400000, 0], [1561964400000, 0], [1564642800000, 0], [1567321200000, 0], [1569913200000, 0], [1572591600000, 86.62], [1577779200000, 2.50]],
+				[[1546329600000, 2.50], [1549008000000, 0], [1551427200000, 0], [1554102000000, 0], [1556694000000, 0], [1559372400000, 1.25], [1561964400000, 2.50], [1564642800000, 1.25], [1567321200000, 1.50], [1569913200000, 1.50], [1572591600000, 1.50], [1577779200000, 19.00]],
+				[[1546329600000, 21.275], [1549008000000, 32.2625], [1551427200000, 25.0625], [1554102000000, 23.325], [1556694000000, 8.0625], [1559372400000, 11.04], [1561964400000, 10.21], [1564642800000, 17.04], [1567321200000, 13.48], [1569913200000, 40.8], [1572591600000, 0], [1577779200000, 0]],
+				[[1546329600000, 66.1425], [1549008000000, 41.2625], [1551427200000, 29.5125], [1554102000000, 40.165], [1556694000000, 67.0175], [1559372400000, 16.0375], [1561964400000, 23.3975], [1564642800000, 56.71], [1567321200000, 59.6925], [1569913200000, 42.8225], [1572591600000, 23.45], [1577779200000, 14.8075]],
+				[[1546329600000, 3.295], [1549008000000, 14.6775], [1551427200000, 39.9325], [1554102000000, 12.065], [1556694000000, 27.175], [1559372400000, 12.225], [1561964400000, 6.7475], [1564642800000, 5.2775], [1567321200000, 4.9425], [1569913200000, 1.755], [1572591600000, 9.0625], [1577779200000, 108.395]],
+				[[1546329600000, 26.2875], [1549008000000, 27.55], [1551427200000, 12.5], [1554102000000, 27.5], [1556694000000, 22.50], [1559372400000, 17.5], [1561964400000, 32.5], [1564642800000, 37.50], [1567321200000, 20.00], [1569913200000, 27.5], [1572591600000, 0], [1577779200000, 0]]
+			];
+			
+			let chartConfig = {
+				type: 'area',
+				backgroundColor: '#1a1c1e',
+				globals: {
+				  	fontColor: '#ffffff',
+				  	fontFamily: 'Work Sans'
+				},
+				title: {
+				  text: 'A Big Picture Comparison of My Yearly<br>Commuting Costs, Broken Down by Brand',
+				  align: 'left',
+				  padding: '5 40',
+				  color: '#ffffff',
+				  width: 323,
+				  fontSize: '16px',
+				  textAlign: 'left',
+				  offsetY: 26
+				},
+				subtitle: {
+				  text: '<i>Note: ‘Metro’ is a generic catchall term</i>',
+				  align: 'left',
+				  padding: '25 40',
+				  color: '#ffffff',
+				  offsetY: 26,
+				  fontWeight: 400
+				},
+				plot: {
+				  alphaArea: 1,
+				  lineWidth: '0px',
+				  maxNodes: 0,
+				  maxTrackers: 0
+				},
+				plotarea: {
+				  margin: '130px 40px 110px 55px'
+				},
+		    source:{
+				  text: 'Made with ZingChart',
+				  fontWeight: '400',
+				  fontColor: '#8a8a8a',
+				  fontSize: '9px',
+				  marginTop: '420px',
+				  marginRight: '5px'
+			},
+				scaleX: {
+				  transform: {
+				  	type: 'date'
+				  },
+				  item: {
+				  	fontSize: '10px'
+				  },
+				  label: {
+				  	text: 'Month in 2019',
+				  	color: '#ffffff',
+				  	fontSize: '10px'
+				  },
+				},
+				scaleY: {
+				  guide: {
+				  	visible: false
+				  },
+				  item: {
+				  	visible: false
+				  },
+				  label: {
+				  	text: 'Relative Cost (USD)',
+				  	color: '#ffffff',
+				  	fontSize: '11px'
+				  },
+				  lineColor: '#ffffff',
+				  tick: {
+				  	visible: false
+				  }
+				},
+				scrollX: {},
+				series: [
+				  {
+				  	values: [], // empty, needed for scaleY
+				  	legendItem: {
+				  		visible: false
+				  	}
+				  }
+				],
+				shapes: [
+				  {
+				  		type: 'rect',
+				  		backgroundColor: '#1a1c1e',
+				  		borderColor: '#ffffff',
+				  		borderWidth: '1px',
+				  		height: 75,
+				  		width: 117,
+				  		x: 613,
+				  		y: 70,
+				  		label: {
+				  			  text: 'More Money<br>↑<br>–<br>↓<br>Less Money',
+				  			  offsetY: 1,
+				  			  offsetX: '-20px',
+				  			  y: 0,
+				  			  fontSize: '9px',
+				  			  textAlign: 'center'
+				  		}
+				  },
+				  {
+				  		type: 'rect',
+				  		backgroundColor: '#EB1E5F,#4043ff',
+				  		height: 54,
+				  		width: 30,
+				  		x: 644,
+				  		y: 69
+				  }
+				],
+			};
+			
+			let pcstep = 100 / queries.length;
+			
+			for (let q = 0; q < queries.length; q++) {
+				let scaleYName = 'scaleY' + (q + 2);
+				let scaleYNameD = 'scale-y-' + (q + 2);
+				chartConfig[scaleYName] = {
+				  values: '0:100:20',
+				  blended: true,
+				  backgroundColor: '#1a1c1e',
+				  guide: {
+				  	visible: false
+				  },
+				  item: {
+				  	visible: false
+				  },
+				  label: {
+				  	text: queries[q],
+				  	color: '#ffffff',
+				  	fontAngle: 0,
+				  	fontSize: '10px',
+				  	offsetX: '-108px',
+				  	offsetY: '12px',
+				  	textAlign: 'right',
+				  	width: '200px',
+				  	fontWeight: 'normal'
+				  },
+				  lineWidth: '0px',
+				  markers: [
+				  	{
+				  		type: 'area',
+				  		backgroundColor: '#1a1c1e',
+				  		range: [0, 100]
+				  	},
+				  	{
+				  		type: 'line',
+				  		lineColor: '#ffffff',
+				  		lineWidth: '1px',
+				  		placement: 'top',
+				  		range: [0]
+				  	}
+				  ],
+				  offsetStart: (pcstep * q) + '%',
+				  offsetEnd: (100 - pcstep * (q + 1)) + '%',
+				  placement: 'opposite',
+				  tick: {
+				  	visible: false
+				  },
+				};
+				chartConfig.series.push({
+				  scales: 'scale-x,' + scaleYNameD,
+				  text: queries[q],
+				  values: chartData[q],
+				  backgroundColor: '#EB1E5F,#4043ff',
+				});
+			};
+			
+			zingchart.render({
+				id: 'myChart2',
+				output: 'svg',
+				data: chartConfig,
+			});
+			
+			
+			window.addEventListener('load', () => {
+				let chartConfig = {
+				  type: 'hbar',
+				  globals: {
+				  	fontSize: '10px',
+				  	fontColor: '#ffffff',
+				  	fontFamily: 'Work Sans',
+				  },
+				  backgroundColor: '#1a1c1e',
+				  title: {
+				  	text: 'My Monthly Commuting Costs in 2019 Sorted by Brand',
+				  	width: 323,
+				  	fontSize: '17px',
+				  	textAlign: 'left',
+				  	offsetX: 26,
+				  	offsetY: 20
+				  },
+				  legend: {
+				  	layout: '1x6',
+				  	header: {
+				  		'visible':'false',
+				  		text: 'Company Name'
+				  	},
+				  	padding: '7px',
+				  	backgroundColor: '#1a1c1e',
+				  	draggable: true,
+				  	marginTop: 65,
+				  	marginLeft: 30,
+				  	fontSize: '9px',
+				  	marker:{
+				 	  borderWidth: 0,
+				  	}
+				  },
+				  // plot represents general series, or plots, styling
+				  plot: {
+				  	stacked: true,
+				  	stackType:'normal',
+				  	barWidth: '75%',
+				  	// animation docs here:
+				  	// https://www.zingchart.com/docs/tutorials/design-and-styling/chart-animation/#animation__effect
+				  	animation: {
+				  		effect: 'ANIMATION_EXPAND_BOTTOM',
+				  		method: 'ANIMATION_STRONG_EASE_OUT',
+				  		sequence: 'ANIMATION_BY_PLOT',
+				  		speed: 375
+				  	},
+				  	borderColor: '#1a1c1e',
+					borderWidth: 1
+				  },
+				  scaleX: {
+				  	labels: ['January 19', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+				  	label: {
+				  		text: 'Months in 2019',
+				  		fontSize: '9px'
+				  	},
+				  	maxItems: 12,
+				  	item:{  
+				  		fontSize: '9px' 
+				  	},
+				  	tick: {
+				  		visible: false
+				  	},
+				  	step: 12
+				  },
+				  scaleY: {
+				  	minValue: 0,
+						step: 50,
+						maxItems: 12,
+				  	item:{  
+				  		fontSize: '9px' 
+				  	},
+				  	label: {
+				  		text: 'Cost (USD)',
+				  		fontSize: '9px'
+				  	},
+				  	guide: {
+				  		lineColor: '#2F2F2F',
+				  	}  
+				  },
+				  plotarea: {
+				  	marginTop: '130px',  
+				  	marginLeft: '105px'   
+				  },
+				  crosshairX: {
+				  	plotLabel: {
+				  		text: `
+				  		<div class='custom-tooltip' style='background-color:%color; width: 100%; margin-top: -34px; margin-left: -4px; padding-left: 6px; padding-right: 1px; padding-bottom: 10px; height: 27px; border: 1px solid white; line-height: 1.5;'>
+				  			<p style='margin-top: -7px; padding-left: 2px; padding-right: 2px;'>$%v spent on %t in %kl</p>
+				  		</div>`,
+				  		backgroundColor: '#1a1c1e',
+				  		fontColor: '#ffffff',
+				  		decimals: 2,
+				  		padding: 0,
+				  		htmlMode: true
+				  	},
+				  	lineWidth: '100%',
+				  	lineColor: '#000000',
+				  	height: 30,
+				  	borderWidth: 0,
+				  	alpha: 0.2,
+				  	decimals: 2,
+				  	backgroundColor: '#1a1c1e',
+				  	scaleLabel: {
+				  		visible: false
+				  	}
+				  },
+				  tooltip: {
+				  	visible: false
+				  },
+				  source:{
+						text: 'Made with ZingChart',
+						fontWeight: '400',
+						fontColor: '#8a8a8a',
+						fontSize: '9px',
+						marginBottom: '-20px',
+						marginRight: '5px'
+				},
+				  series: [
+				  	{
+				  		values: [105.15, 110.20, 50.00, 110.00, 90.00, 70.00, 130.00, 150.00, 80.00, 110.00, 0, 0],
+				  		text: 'Bird',
+				  		backgroundColor: '#D322A1'
+				  	},
+				  	{
+				  		values: [13.18, 58.71, 159.73, 48.26, 108.70, 48.90, 26.99, 21.11, 19.77, 7.02, 36.25, 433.58],
+				  		text: 'Lyft',
+				  		backgroundColor: '#E395FF'
+				  	},
+				  	{
+				  		values: [264.57, 165.05, 118.05, 160.66, 268.07, 64.15, 93.59, 226.84, 238.77, 171.29, 93.80, 59.23],
+				  		text: 'Uber',
+				  		backgroundColor: '#FF3868'
+				  	},
+				  	{
+				  		values: [85.10, 129.05, 100.25, 93.30, 32.25, 44.16, 40.84, 68.16, 53.92, 163.20, 0, 0],
+				  		text: 'Lime',
+				  		backgroundColor: '#6D22CC'
+				  	},
+				  	{
+				  		values: [10.00, 0, 0, 0, 0, 5.00, 10.00, 5.00, 6.00, 6.00, 6.00, 76.00],
+				  		text: 'Metro',
+				  		backgroundColor: '#47A7FF'
+				  	},
+				  	{
+				  		values: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 346.48, 0],
+				  		text: 'Xiaomi',
+				  		backgroundColor: '#2B33FF'
+				  	},
+				  ]
+				};
+			
+				// render chart
+			zingchart.render({
+				id: 'myChart3',
+				output: 'svg',
+				data: chartConfig,
+			});
+			});
+			
+			window.addEventListener('load', () => {
+				let chartConfig = {
+				  type: 'ring',
+				  globals: {
+				  	fontSize: '11px',
+				  	fontColor: '#ffffff',
+				  	fontFamily: 'Work Sans'
+				  },
+				  backgroundColor: '#1a1c1e',
+				  title: {
+				  	text: 'My Total Commuting Costs in 2019<br>Broken Down by Brand',
+				  	width: 323,
+				  	fontSize: '17px',
+				  	textAlign: 'left',
+				  	offsetX: 26,
+				  	offsetY: 26
+				  },
+				  subtitle: {
+					text: '<i>Note: Metro is a generic catchall term</i>',
+					textAlign: 'left',
+					offsetX: 26,
+					offsetY: 46,
+					fontWeight: 'normal'
+				  },
+				  legend: {
+				  	header: {
+				  		'visible':'true',
+				  		text: 'Company Name'
+				  	},
+				  	padding: '7px',
+				  	backgroundColor: '#1a1c1e',
+				  	draggable: true,
+				  	marginTop: 310,
+				  	marginLeft: 33,
+				  	marker:{
+				  	borderWidth: 0
+				  	}
+				  },
+				  // plot represents general series, or plots, styling
+				  plot: {
+				  	valueBox: {
+				  		text: '$%v USD',
+				  		placement: 'out',
+				  		fontColor: '#ffffff',
+				  		borderWidth: 1,
+				  		borderColor: '#ffffff',
+				  		backgroundColor: '#1a1c1e',
+				  		textAlign: 'left',
+				  		shadow: false,
+				  		padding: '7px',
+				  		fontWeight: 'normal',
+				  		fontSize: '11px'
+				  	},
+				  	// hoverstate
+				  	tooltip: {
+				  		// % symbol represents a token to insert a value. Full list here:
+				  		// https://www.zingchart.com/docs/tutorials/chart-elements/zingchart-tokens/
+				  		text: '%npv% of my total 2019 spend went<br>towards <strong>%t</strong>',
+				  		padding: '10px 15px',
+				  		// htmlMode renders text attribute as html so
+				  		// &deg; is rendered
+				  		htmlMode: true,
+				  		textAlign: 'left'
+				  	},
+				  	// animation docs here:
+				  	// https://www.zingchart.com/docs/tutorials/design-and-styling/chart-animation/#animation__effect
+				  	animation: {
+				  		effect: 'ANIMATION_EXPAND_BOTTOM',
+				  		method: 'ANIMATION_STRONG_EASE_OUT',
+				  		sequence: 'ANIMATION_BY_PLOT',
+				  		speed: 375
+				  	},
+				  	slice: '50%',
+				  	borderColor: '#1a1c1e',
+						borderWidth: 1
+				  },
+				  plotarea: {
+				  	marginLeft: '100px'
+				  },
+				  source:{
+						text: 'Made with ZingChart',
+						fontWeight: '400',
+						fontColor: '#8a8a8a',
+						fontSize: '9px',
+						marginBottom: '3px',
+						marginRight: '5px'
+				},
+				  series: [
+				  	{
+				  		text: 'Bird e-scooters',
+				  		// plot values
+				  		values: [1005.25],
+				  		backgroundColor: '#D322A1',
+				  	},
+				  	{
+				  		text: 'Lyft e-scooters & rides',
+				  		// plot values
+				  		values: [982.20],
+				  		backgroundColor: '#E395FF'
+				  	},
+				  	{
+				  		text: 'Uber e-bikes & rides',
+				  		// plot values
+				  		values: [1924.07],
+				  		backgroundColor: '#FF3868'
+				  	},
+				  	{
+				  		text: 'Lime e-scooters',
+				  		// plot values
+				  		values: [812.23],
+				  		backgroundColor: '#6D22CC'
+				  	},
+				  	{
+				  		text: 'Metro rides',
+				  		// plot values
+				  		values: [124.00],
+				  		backgroundColor: '#47A7FF'
+				  	},
+				  	{
+				  		text: 'Xiaomi e-scooter',
+				  		// plot values
+				  		values: [356.48],
+				  		backgroundColor: '#2B33FF'
+				  	}
+				  ]
+				};
+			
+				// render chart
+				zingchart.render({
+				  id: 'myChart4',
+				  data: chartConfig,
+				  height: '100%',
+				  width: '100%',
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155724944-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-155724944-1');
+	</script>
+    <meta charset="utf-8">
+    <title>How Much it Cost Me to Commute Without Owning a Car in 2019 -|- outer outer space</title>
+	<meta name="description" content="A set of data visualizations showing the amount of money I spent on commuting in 2019 without owning a car.">
+	<meta name="author" content="Outer Outer Space">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inria+Serif:400,400i,700&display=swap" rel="stylesheet">
+	</head>
+	<style>
+	    @font-face {
+		  font-family: 'Chomsky';
+		  src: url('../../fonts/Chomsky.otf'); /* IE9 Compat Modes */
+		  src: url('../../fonts/Chomsky.otf')  format('opentype'), /* Safari, Android, iOS */
+		}
+		html, body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			background: #1a1c1e;
+			font-family: 'Work Sans', sans-serif;
+			color: #ffffff;
+			letter-spacing: .02em;
+		}
+		
+		.wrapper {
+			max-width: 710px;
+			margin: 0 auto 100px auto;
+			height: auto;
+			padding: 20px;
+		}
+		
+		header {
+			width: 100%;
+			/*display: flex;
+			justify-content: space-between;*/
+			margin-top: 60px;
+		}
+		
+		.title-section-h1 {
+			font-size: 33px;
+			line-height: 1.2;
+			max-width: 700px;
+			margin-bottom: 10px;
+		}
+		
+		.title-section-p {
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: 0.03em; 
+			text-align: left;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		
+		navigation {
+			width: 100%;
+			margin: 0 auto;
+		}
+		
+		.navigation-title,
+		.footer-title {
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 20px;
+		}
+
+		.navigation-title:hover,
+		.footer-title:hover {
+			color: #11f5a9;
+		}
+		
+		.navigation-title em,
+		.footer-title em {
+			font-family: 'Chomsky', serif;
+		}
+		
+		.navigation-list {
+			padding: 0;
+		}
+		
+		.navigation-list-item {
+			list-style-type: none;
+			display: inline-block;
+			margin-right: 6px;
+		}
+		
+		.navigation-list-item:last-child {
+			margin-right: 0;
+		}
+		
+		.navigation-list-link {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 6px 10px;
+			border: 1px solid #ffffff;
+			font-size: 11px;
+		}
+		
+		.navigation-list-link:hover {
+			color: #1a1c1e;
+			background: #ffffff;
+		}
+		
+		hr {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		
+		h2 {
+			font-size: 28px;
+			padding-top: 50px;
+		}
+		
+		.body-p {
+			/*font-family: 'Inria Serif', serif;*/
+			font-size: 19px;
+			line-height: 1.4;
+			letter-spacing: 0.03em;
+		}
+		.body-p a {
+    		color: #11f5a9;
+    		text-decoration: none;
+		}
+		.body-p a:hover {
+    		color: #f5117f;
+		}
+		figure {
+			margin: 20px 0 40px;
+			padding: 0;
+		}
+		img {
+			width: 100%;
+		}
+		.caption {
+			font-size: 12px;
+			font-style: italic;
+			color: #bbbbbb;
+			letter-spacing: .04em;
+		}
+		.caption-link {
+			color: #ffffff;
+		}
+		.caption-link:hover {
+			color: #11f5a9;
+		}
+		footer {
+			text-align: center;
+			padding-bottom: 100px;
+		}
+		.footer-hr {
+			margin: 100px 0;
+		}
+		.footer-title {
+			text-align: center;
+		}
+	</style>
+	<body>
+	    <div class="wrapper">
+			<navigation>
+				<a class="navigation-title" href="../../"><strong>Outer</strong> <em>Outer</em> <strong>Space</strong></a>
+			<hr>
+				<ul class="navigation-list">
+					<li class="navigation-list-item"><a class="navigation-list-link" href="../">View Project</a></li>
+					<li class="navigation-list-item"><a class="navigation-list-link" href="../img/cost-of-commuting-without-a-car-in-2019.png">Download Infographic</a></li>
+					<li class="navigation-list-item"><a class="navigation-list-link" href="https://app.zingsoft.com/demos/create/RLX2JXDW" target="_blank">Play with Project Code</a></li>
+				</ul>
+			</navigation>
+			
+			<article>
+				<header>
+					<h1 class="title-section-h1">I Visualized My Commuting Data from 2019 to See if It Was Cheaper than Owning a Car</h1>
+					<p class="title-section-p">Posted in January 2020 by outer outer space</p>
+				</header>
+
+				<section>
+			<p class="body-p">Last year I moved to a new city, and decided I didn't want to have a car. I'd been relying on a company vehicle for a few years before the move, so it was easy enough to transition back to not having one. I didn't initially track how much I spent on commuting throughout the year, so I decided to use the new year as an opportunity to evaluate how it went.</p> 
+
+			<p class="body-p">The data for this project includes my paid e-scooter rides, e-bike rides, ride shares, public transit rides, and the costs of purchasing and maintaining a used Xiaomi M365 scooter. It doesn’t include any of the plane or train rides I purchased for long-distance travel in 2019.</p>
+			
+			<p class="body-p">This post includes a description of my tools and methods, a brief explanation of my transportation lifestyle, and some thoughts on data privacy as it applies to this project. I plan to shortly make another post to go into the nitty gritty details about how I built this multi-chart interactive infographic.</p>
+				</section>
+
+				<figure>
+					<img src="../img/my-monthly-commuting-costs.gif" alt="A horizontal bar chart showing how much I spent per month in 2019 on commuting with alternative forms of transportation.">
+					<figcaption><p class="caption">This horizontal bar chart is the first out of four JavaScript charts I created for this project. <a class="caption-link" href="../index.html">View interactive version</a></p></figcaption>
+				</figure>
+				
+				<section>
+				<h2>Collecting My Data</h2>
+				
+				<p class="body-p">Initially I tried to go the route of requesting my personal data from each company I used for alternative transportation, but that became a mess, and in some cases the data wasn't even available anymore (I'm looking at you Bird).</p>
+    				
+    			<p class="body-p">Regardless, I quickly became caught up in the endless possibilities and intricacies of the commuting data that <em>was</em> available. <em>Should I represent every day of the year in my data, or only the days when I commuted? How should I represent multiple commuting transactions on the same day? What data density should I choose – days, weeks, months, quarters, years?</em></p>
+				
+				<p class="body-p">Suffice it to say that homogenizing and cleaning up the data available from Lime, Bird, Uber, etc. became a deeper rabbit hole than I was expecting, so I stalled for awhile, and ultimately changed course. I could have viewed the hours of work I did at this stage as a waste, but they helped me clarify what it is that I was even trying to communicate with this project. The original datasets I was working with included the ride costs, duration of my commutes, the distance I traveled, the start times and end times, and a few other data points. When faced with that many options I stalled, so I narrowed my focus to something more manageable.</p>
+				
+				<p class="body-p">I decided to sacrifice the incomplete distance and time-based data sent to me by each company in favor of much more reliable financial data that I pulled (tediously) from my online bank statements. It took about three hours to manually tabulate and break it up into meaningful categories in a spreadsheet in Apple Numbers. In the process, I got to revisit my past year's worth of financial transactions, which is something I should probably do more often...</p>
+				
+				<figure>
+					<img src="../img/commuting-spending-total-in-2019.png" alt="My total commuting costs in 2019 were $5,2014.33, including scooter, bike, ride share and public transit data.">
+					<figcaption><p class="caption">The grand total of what I spent in 2019 commuting. <a class="caption-link" href="../index.html">View interactive version</a></p></figcaption>
+				</figure>
+				</section>
+				
+				<section>
+				<h2>Visualizing My Data</h2>
+				
+				<p class="body-p">Choosing the right chart types took some consideration and iteration once I finalized my dataset and understood what I was working with. My tabulated data is comprised of three fields – transaction date, transaction amount, and transportation company name. Since in my first chart I'm comparing quantities month-over-month, a horizontal bar chart made the most sense for visualizing my overall monthly spending. I initially thought I'd be using a vertical bar chart for this, but after trying it out, I realized it's less visually effective for comparing currency totals over time. </p>
+				
+				<p class="body-p">In contrast, a ring chart made the most sense for comparing how much I spent with each company throughout the year in my fourth chart because it allows for the comparison of proportional quantities within a whole. In this case, I thought I'd be using a pie chart at first, but decided that the huge expanses of color were too much of a distraction. I hadn't previously appreciated just how much ring charts help reduce the intensity of those slices in a pie, especially when you have a variety of charts placed on the same page.</p>
+				
+				<p class="body-p">I deliberated for awhile over the best chart type to use to represent month-over-month spending categorized by brand. Ultimately, I decided to represent it in two different ways – using stacked area charts to provide a high-level visual comparison of my relative spending with each brand throughout the year, and using a stacked horizontal bar chart to provide a more granular comparison of my spending with each brand month-over-month.</p>
+				
+				<figure>
+					<img src="../img/big-picture-comparison-of-monthly-commuting-spending-in-2019.png" alt="A set of 6 stacked area charts depicting how much money I spent with 6 different transportation companies in 2019.">
+					<figcaption><p class="caption">The third out of four JavaScript charts I created for this project. This is a set of stacked area charts that I used to provide a high-level visual comparison over time. <a class="caption-link" href="../index.html">View interactive version</a></p></figcaption>
+				</figure>
+				
+				<p class="body-p">I chose to represent the same data with these two different chart types because I think they complement each other. The stacked area charts obscure the numerical accuracy of my data, but they provide a big picture overview. The stacked horizontal bar chart on the other hand exposes the specific numerical quantities in question, but adds a lot more visual noise to the relative comparison, obscuring the patterns that emerge month-over-month.</p>
+				
+				<p class="body-p">I designed the initial concept for this project in Figma, which is my go-to design program for both personal and professional design projects. It's the best. Although there are plenty of plugins available now that make quick work of creating charts in Figma, I chose to start from scratch because I wanted to have more control over individual chart elements, especially the legend.</p>
+				
+				<p class="body-p">I've been really inspired by <a href="https://datalands.co/" target="_blank">Datalands</a> lately, so I decided to use this project as an opportunity to  interpret their visual identity in my own way, mainly by integrating contrast, bright colors, gradients, and thin linework. I tried to include accessible colors, but ended up deviating from them somewhat in an effort to achieve what I'd originally envisioned.</p>
+				
+				</section>
+				
+				<section>
+				<h2>Building My Charts</h2>
+				
+				<p class="body-p">Although I could have stopped with the static Figma designs, I wanted to build interactive versions of my charts, too. I often see static image examples of charts being purveyed on the internet, but I don't see enough examples of the interactive charts that it's possible to make now with very little prior knowledge. Features like chart exporting, animation, and customization are way more in reach than I thought as a novice, because a lot of data visualization libraries include them by default.</p>
+				
+				<p class="body-p">Disclaimer: I am on the ZingSoft team that works on ZingChart, which is the main reason why I chose to use it in this project, so I can better learn how to use the library while pursuing my personal projects. I don't know JavaScript and haven't tried a project at this scale before, so it seemed like it would be a good learning opportunity in both cases. Any additional JavScript you happen to notice in my project beyond basic chart code has been cannibalized from other demos I found online.</p>
+				
+				<p class="body-p">It took me about five hours overall to recreate my design, including the iterations for color and chart types that I mentioned earlier. I'm actually surprised at how close to my original designs it turned out, because I was somewhat intimidated going in. I highly doubt it would take me that long to do another similar project like this now that I think I've bulldozed most of the way through the initial learning curve.</p>
+				
+				<p class="body-p">Having said that, as a follow-up to this project, I'm planning on trying to build this same infographic using other charting libraries like Highcharts or Chart.js to see how the experience compares for someone with little to no Javascript knowledge. It should be fun!</p>
+				
+				<figure>
+					<img src="../img/commuting-costs-in-2019-categorized-by-brand.png" alt="A ring chart that shows how much money I spent with 6 different transportation companies in 2019.">
+					<figcaption><p class="caption">The fourth out of four JavaScript charts I created for this project. This ring chart shows how much I spent with each transportation company for the whole year. <a class="caption-link" href="../index.html">View interactive version</a></p></figcaption>
+				</figure>
+				
+				</section>
+				
+				<section>
+				<h2>Conclusion</h2>
+				
+				<p class="body-p">At this point in my life, I don't want to own a car. That may change in a few years, but it's what I prefer for now. It's not that I don't enjoy driving, or the convenience of getting around quickly on my own time. It's just that my desire to not have to deal with things like parking, car payments, insurance, maintenance, gas, depreciation (and did I mention parking?) is much stronger, as is my enjoyment of being outdoors. In fact, this desire is so strong that I move my life around to accommodate it. Indeed, it's why I chose to live 1.2 miles away from my office – because I've realized that one of the things I want out of life is to live in walkable areas that prioritize many forms of public transportation. </p>
+				
+				<p class="body-p">Part of my goal with this project was to see how my commuting expenses compare to the average annual costs of owning a vehicle. To begin with, I was surprised by how much I spent overall this year on commuting – I definitely wasn't expecting to go over the $5,000 mark, and I have to admit I was more than a little irresponsible with my spending this year. If I had paid attention earlier, I would have known that I was better off purchasing an e-scooter rather than renting them. This is especially true given the way each company's pricing model changed over the year (once again, I'm looking at you Bird). But that's a story for another bog post, which I'd be crazy not to write given the data I now have to work with.</p>
+				
+				<p class="body-p">As a result, something I've resolved to do more of this year is to take the bus, especially as an alternative to ride sharing and renting e-scooters. For one thing, it encourages me to walk more and to take in the environment. For another, it's way less expensive. And for another, I live in California, the current epicenter of strife between gig economy companies like Uber and Lyft on one hand, and government agencies at all levels within the state on the other. Indeed, Lime just pulled out of San Diego this week, no doubt in part because of the mounting legislative hurdles it was beginning to face.</p>
+				
+				<p class="body-p">It would be tone-deaf of me not to acknowledge that by spending so much money with these companies, I've implicitly supported organizations that may not always prioritize the consumer's or worker's best interests in the eyes of local governments. Still, this issue isn't one-dimensional, and there are numerous factors on both sides that come into play. The issue of public transportation and micro-mobility is one that deserves a lot more attention and consideration than I can give in this blog post, so I'll stop there for now.</p> 
+				
+				<p class="body-p">In any case, what I learned from this project is that for me, going car-less potentially saved me somewhere around $3,000 compared to what I would have apparently spent if I'd chosen to own a vehicle, although that number could assume I already owned the vehicle. This is based on <a href="https://newsroom.aaa.com/tag/your-driving-costs/" target="_blank">AAA's estimate in 2017</a> that the average annual cost of owning a vehicle is in the ballpark of $8,469. Some might argue that at least with a car, your money's going towards an investment that you can re-use if taken care of, regardless of depreciation, so I can definitely see why it's worth it depending on your mindset. That's just not where my mind's at these days.</p>
+				
+				<p class="body-p">For those who are wondering how much it would cost on a yearly basis if you decided to go car-less, I hope this project gave you some insight into what it can look like! It's worth noting that I traveled a lot this year, and there are a few $70 to $80 ride share trips peppered in there just from riding to and from airports in cities like New York and London, which adds up. Still, the vast majority of the trips chronicled in this project were trips for work, trips for social events, and trips to run errands. </p>
+				</section>
+				
+				<section>
+				<h2>PS: How this Project Intersects with Data Privacy</h2>
+				
+				<p class="body-p">Earlier I mentioned that Bird was the only company that didn't have much in the way of commuting data to give me. That's because they only store 3 months worth of riding data (last I checked). Companies like Lime, Lyft, Uber and my bank on the other hand seem to hang onto my lifetime of commuting data, or at least the past year's worth of it.</p>
+				
+				<p class="body-p">It didn't occur to me until recently how my experience in this case fits into the larger conversation about data privacy. I was initially really frustrated with Bird when they told me they couldn't provide more than the past three month's worth of data because they don't store it, especially given the comparative ease with which I was able to get my lifetime riding data from Lime. But I belatedly realized that Bird's response might actually be a good thing from a data privacy perspective, because this means that they're not hanging onto my data (probably).</p>
+				
+				<p class="body-p">This realization ultimately led me to consider two perspectives – that of someone trying to visualize their personal data, and that of someone trying to protect their personal data (I know they don't have to be mutually exclusive). The former person might externalize the responsibility of data collection and storage to the companies they interface with, like I do. The latter person internalizes the responsibility of data collection and storage, and in extreme cases would rather the companies they interface with not collect any data about them at all. </p>
+				
+				<p class="body-p">It was odd to find myself in the former camp during this project. It made me realize that as much as I advocate for the latter perspective, I would find it exhausting to enforce across the board, especially when trying to work on projects like this one. This project showed me that in many ways, I rely heavily on external and decentralized sources (e.g. companies) to collect and store my data for me. For all the downsides and risks inherent in that choice, there are also a few benefits that come with externalized and decentralized personal data management – I'm not sure how else I would have gathered the data for this project otherwise, given its last-minute nature. </p>
+				
+					<p class="body-p">Having said that, data privacy is a subject that the majority people view as removed from daily life. For the most part it's something developers, thought workers, and generally tech-savvy people pay attention to because they have the luxury of technological literacy. However <a href="https://www.nngroup.com/articles/computer-skill-levels/" target="_blank">there are still plenty of people out there</a> who don't have that kind of awareness about how their online behavior translates into a data trail. Working on this project has made me more aware than ever of how that translation takes place, and has made me more curious than ever about what my personal data says about me.</p>
+				</section>
+			</article>
+			
+			<p class="body-p" style="text-align: center; margin-top: 60px;"><a href="emailto:hi-from@outer-outer.space">Tell me what you think.</a></p>
+
+			<footer>
+				<hr class="footer-hr">
+
+				<a class="footer-title" href="../../"><strong>Outer</strong> <em>Outer</em> <strong>Space</strong></a>
+			</footer>
+	    </div>
+	</body>
+</html>
